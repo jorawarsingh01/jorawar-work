@@ -1,9 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Header from './header';
 
 
 function Contact() {
+  const navigate = useNavigate();
+  const gotoHome=()=>{
+    navigate('/')
+  }
 
   
   
@@ -12,6 +16,7 @@ function Contact() {
     <Header/>
     <section>
       CONTACT PAGE
+      <button onClick={gotoHome}>go to home</button>
     </section>
     </>
   );
